@@ -1,0 +1,294 @@
+/* Basic Reset & Defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Container for consistent width */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden; /* Clear floats */
+  padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky; /* Keep nav bar at top */
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+header nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li {
+  margin-left: 20px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+header ul li a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Sections General Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url('https://via.placeholder.com/1500x600.png?text=Web+Development+Background') no-repeat center center/cover; /* Replace with your image */
+  color: #fff;
+  min-height: 70vh; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px; /* Padding for content */
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px; /* Limit width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Call-to-Action Buttons */
+.cta-button {
+  display: inline-block;
+  background: #007bff; /* Primary color */
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none; /* For button elements */
+  cursor: pointer; /* For button elements */
+}
+
+.cta-button:hover {
+  background: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.cta-button.secondary {
+  background: #6c757d; /* Secondary color */
+}
+
+.cta-button.secondary:hover {
+  background: #5a6268;
+}
+
+/* Learning Content Section */
+#learn {
+  background: #fff;
+}
+
+.learning-modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: left;
+}
+
+.module {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.module:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.module i {
+  color: #007bff; /* Icon color */
+  margin-bottom: 15px;
+}
+
+.module h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Enrollment Section */
+#enroll {
+  background: #e9ecef; /* Light grey background */
+}
+
+#enroll form {
+  max-width: 500px;
+  margin: 30px auto 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#enroll form button {
+  width: 100%; /* Make button full width */
+  margin-top: 10px;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.form-message.success {
+  color: green;
+}
+.form-message.error {
+  color: red;
+}
+
+
+/* Practice Section */
+#practice {
+  background: #fff;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px; /* Space above footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav {
+      flex-direction: column;
+      align-items: center;
+  }
+  header ul {
+      margin-top: 15px;
+      padding-left: 0; /* Remove default padding */
+      flex-wrap: wrap; /* Allow nav items to wrap */
+      justify-content: center;
+  }
+  header ul li {
+      margin: 5px 10px; /* Adjust spacing */
+  }
+
+  #hero h1 {
+      font-size: 2.8rem;
+  }
+  #hero p {
+      font-size: 1.1rem;
+  }
+
+  section h2 {
+      font-size: 2rem;
+  }
+
+  .learning-modules {
+      grid-template-columns: 1fr; /* Stack modules on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+      font-size: 2.2rem;
+  }
+  #hero p {
+      font-size: 1rem;
+  }
+   header .logo {
+      margin-bottom: 10px; /* Space below logo */
+  }
+  header ul li {
+      margin: 5px; /* Even smaller margin */
+  }
+  .cta-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+  }
+  section {
+      padding: 40px 15px;
+  }
+   #enroll form {
+      padding: 20px;
+  }
+}

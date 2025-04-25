@@ -1,10 +1,4 @@
-# Hi, I'm Bonface Roman!
-- Web Developer | AI Enthusiast | Teacher
-- Passionate about building helpful tools and teaching others
-- Currently learning Full-Stack Development
 
-### Let's Connect:
-[LinkedIn](https://www.linkedin.com/bonfaceroman)
 page_type: sample
 languages:
   - javascript
